@@ -33,3 +33,10 @@ body {
   height: 2000px;
   transform: rotate(77.33deg);
 }
+
+.bg-grad-5 {
+  background: rgba(113, 39, 241, 0.5);
+  filter: blur(180px);
+  height: 2000px;
+  transform: rotate(-50.02deg);
+}

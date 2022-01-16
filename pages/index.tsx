@@ -14,6 +14,14 @@ import uranus from "../assets/images/uranus.png"
 const Home: NextPage = () => {
   return (
     <>
+      <div className="sm:hidden absolute mt-24 w-screen h-screen overflow-hidden opacity-60">
+        <div className="absolute bottom-0 -right-24 h-64 w-64">
+          <Image
+            src={wheel}
+            alt="Wheel"
+          />
+        </div>
+      </div>
       <div className="relative h-screen overflow-hidden">
         <Image
           src={bg1}
@@ -36,12 +44,12 @@ const Home: NextPage = () => {
           />
         </div>
         <div className="hidden sm:block absolute w-1/12 -top-40 right-1/4 bg-grad-1"></div>
-        <div className="absolute hidden sm:block -right-36 h-96 w-96 sm:top-1/3">
+        {/* <div className="absolute hidden sm:block -right-36 h-96 w-96 sm:top-1/3">
           <Image
             src={wheel}
             alt="Wheel"
           />
-        </div>
+        </div> */}
       </div>
       <div className="relative h-screen overflow-hidden">
         <Image
@@ -101,7 +109,6 @@ const Home: NextPage = () => {
             objectPosition="center"
           />
         </div>
-
         <div className="hidden sm:block absolute -right-20 top-1/4">
           <Image
             src={sling}
@@ -114,6 +121,7 @@ const Home: NextPage = () => {
             alt="Jupyter"
           />
         </div>
+        <div className="hidden sm:block absolute w-1/12 -top-96 left-0 bg-grad-5"></div>
       </div>
     </>
   )
