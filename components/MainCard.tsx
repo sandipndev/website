@@ -12,7 +12,7 @@ import Social from '../components/Social'
 
 const MainCard: NextPage = () => (
   <Card
-    outerClassName="sm:w-1/2"
+    outerClassName="max-w-3xl"
     className="text-white py-6 px-10 flex flex-col space-y-2 relative z-10"
     absBackgroundFills={[
       <div key={1} className="absolute bg-grad-6"></div>,
