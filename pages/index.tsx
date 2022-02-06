@@ -44,12 +44,12 @@ const Home: NextPage = () => {
           />
         </div>
         <div className="hidden sm:block absolute w-1/12 -top-40 right-1/4 bg-grad-1"></div>
-        {/* <div className="absolute hidden sm:block -right-36 h-96 w-96 sm:top-1/3">
+        <div className="absolute hidden sm:block -right-36 h-96 w-96 sm:top-1/3">
           <Image
             src={wheel}
             alt="Wheel"
           />
-        </div> */}
+        </div>
       </div>
       <div className="relative h-screen overflow-hidden">
         <Image
