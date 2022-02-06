@@ -7,8 +7,6 @@ const Intro: NextPage = () => {
   return <>
     <div className="relative h-screen overflow-hidden">
       <Background />
-
-      {/* Main Card */}
       <MainCard />
     </div>
   </>

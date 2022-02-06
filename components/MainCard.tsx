@@ -12,7 +12,7 @@ import Social from '../components/Social'
 
 const MainCard: NextPage = () => (
   <Card
-    outerClassName="w-1/2"
+    outerClassName="sm:w-1/2"
     className="text-white py-6 px-10 flex flex-col space-y-2 relative z-10"
     absBackgroundFills={[
       <div key={1} className="absolute bg-grad-6"></div>,
@@ -60,12 +60,12 @@ const MainCard: NextPage = () => (
       </>
     }
   >
-    <div className="absolute right-0 -top-2">
+    <div className="absolute right-0 -top-2 w-40 sm:w-auto">
       <Image src={wink} alt="me, winking" />
     </div>
     <p className="pt-2 text-lg">Hi there!
-      <span className="ml-2 h-12 w-12">
-        <Image src={wave} alt="wave" />
+      <span className="ml-2 inline-block animate-hi">
+        <Image src={wave} height="20" width="20" alt="wave" />
       </span>
     </p>
     <h1 className="text-4xl font-bold">Sandipan Dey</h1>

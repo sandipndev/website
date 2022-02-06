@@ -65,9 +65,9 @@ img {
   background: rgba(113, 39, 241, 0.4);
   filter: blur(50px);
   margin-top: 100px;
-  margin-left: -60px;
+  margin-left: -120px;
   transform: rotate(60.48deg);
-  width: 500px;
+  width: 550px;
   height: 200px;
 }
 
