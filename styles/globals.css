@@ -1,3 +1,6 @@
+/* Change using https://fonts.google.com/share?selection.family=Nunito:ital,wght@0,300;0,400;0,700;1,300;1,400%7COpen%20Sans:ital,wght@0,400;0,700;1,400;1,700 */
+@import url('https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,300;0,400;0,700;1,300;1,400&family=Open+Sans:ital,wght@0,400;0,700;1,400;1,700&display=swap');
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
@@ -47,7 +50,7 @@ body {
   background-blend-mode: overlay;
   border: 1px solid rgba(255, 255, 243, 0.2);
   box-sizing: border-box;
-  backdrop-filter: blur(12px);
+  backdrop-filter: blur(100px);
   /* Note: backdrop-filter has minimal browser support */
 
   border-radius: 32px;

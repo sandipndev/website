@@ -9,13 +9,13 @@ import Outro from '../sections/Outro'
 
 const Home: NextPage = () => {
   return (
-    <>
+    <div className="font-body">
       <AbsoluteFragments />
       <Intro />
       <Projects />
       <Experience />
       <Outro />
-    </>
+    </div>
   )
 }
 

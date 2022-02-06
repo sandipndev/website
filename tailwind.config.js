@@ -7,7 +7,8 @@ module.exports = {
   theme: {
     extend: {
       fontFamily: {
-        'theme': ['"Glacial Indifference"']
+        body: ['Nunito'],
+        sans: ['"Open Sans"']
       }
     },
   },
