@@ -1,9 +1,29 @@
+/* Change using https://fonts.google.com/share?selection.family=Nunito:ital,wght@0,300;0,400;0,700;1,300;1,400%7COpen%20Sans:ital,wght@0,400;0,700;1,400;1,700 */
+@import url('https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,300;0,400;0,700;1,300;1,400&family=Open+Sans:ital,wght@0,400;0,700;1,400;1,700&display=swap');
+
 @tailwind base;
 @tailwind components;
+
+.tooltip {
+  @apply invisible absolute;
+}
+
+.has-tooltip:hover .tooltip {
+  @apply visible z-50;
+}
+
 @tailwind utilities;
 
 body {
   background-color: #111315;
+}
+
+img {
+  -webkit-user-drag: none;
+  -khtml-user-drag: none;
+  -moz-user-drag: none;
+  -o-user-drag: none;
+  user-drag: none;
 }
 
 .bg-grad-1 {
@@ -39,4 +59,43 @@ body {
   filter: blur(180px);
   height: 2000px;
   transform: rotate(-50.02deg);
+}
+
+.bg-grad-6 {
+  background: rgba(113, 39, 241, 0.4);
+  filter: blur(50px);
+  margin-top: 100px;
+  margin-left: -120px;
+  transform: rotate(60.48deg);
+  width: 550px;
+  height: 200px;
+}
+
+.bg-grad-7 {
+  background: rgba(25, 246, 246, 0.4);
+  filter: blur(50px);
+  width: 200px;
+  height: 200px;
+  right: 25px;
+  top: 5px;
+}
+
+.bg-card {
+  background: linear-gradient(105.81deg, rgba(255, 255, 255, 0.07) 0.73%, rgba(196, 196, 196, 0.01) 100%);
+}
+
+.bg-links {
+  background: linear-gradient(92.49deg, #C33764 0%, #1D2671 100%);
+}
+
+/* copied from figma */
+.card {
+  background: linear-gradient(105.81deg, rgba(255, 255, 255, 0.56) 0.73%, rgba(196, 196, 196, 0.24) 100%);
+  background-blend-mode: overlay;
+  border: 1px solid rgba(255, 255, 243, 0.2);
+  box-sizing: border-box;
+  backdrop-filter: blur(100px);
+  /* Note: backdrop-filter has minimal browser support */
+
+  border-radius: 32px;
 }
