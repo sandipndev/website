@@ -9,6 +9,14 @@ body {
   background-color: #111315;
 }
 
+img {
+  -webkit-user-drag: none;
+  -khtml-user-drag: none;
+  -moz-user-drag: none;
+  -o-user-drag: none;
+  user-drag: none;
+}
+
 .bg-grad-1 {
   background: linear-gradient(90deg, rgba(247, 20, 89, 0.4) -1.01%, rgba(244, 66, 242, 0.4) 99.82%);
   filter: blur(100px);

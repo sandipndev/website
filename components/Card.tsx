@@ -1,7 +1,11 @@
 import type { NextPage } from 'next'
 
-const Card: NextPage = ({ children }) => {
-  return <div className="card">{children}</div>
+interface PageProps {
+  className?: string
+}
+
+const Card: NextPage<PageProps> = ({ children, className }) => {
+  return <div className={"backdrop-blur-sm bg-white/10 " + className}>{children}</div>
 }
 
 export default Card
