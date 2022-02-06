@@ -40,3 +40,15 @@ body {
   height: 2000px;
   transform: rotate(-50.02deg);
 }
+
+/* copied from figma */
+.card {
+  background: linear-gradient(105.81deg, rgba(255, 255, 255, 0.56) 0.73%, rgba(196, 196, 196, 0.24) 100%);
+  background-blend-mode: overlay;
+  border: 1px solid rgba(255, 255, 243, 0.2);
+  box-sizing: border-box;
+  backdrop-filter: blur(12px);
+  /* Note: backdrop-filter has minimal browser support */
+
+  border-radius: 32px;
+}
