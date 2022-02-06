@@ -3,6 +3,15 @@
 
 @tailwind base;
 @tailwind components;
+
+.tooltip {
+  @apply invisible absolute;
+}
+
+.has-tooltip:hover .tooltip {
+  @apply visible z-50;
+}
+
 @tailwind utilities;
 
 body {
@@ -63,12 +72,12 @@ img {
 }
 
 .bg-grad-7 {
-  background: rgba(25, 246, 246, 0.5);
+  background: rgba(25, 246, 246, 0.4);
   filter: blur(50px);
-  width: 150px;
-  height: 150px;
-  right: 10px;
-  top: 10px;
+  width: 200px;
+  height: 200px;
+  right: 25px;
+  top: 5px;
 }
 
 .bg-card {
