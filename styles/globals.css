@@ -52,6 +52,33 @@ img {
   transform: rotate(-50.02deg);
 }
 
+.bg-grad-6 {
+  background: rgba(113, 39, 241, 0.4);
+  filter: blur(50px);
+  margin-top: 100px;
+  margin-left: -60px;
+  transform: rotate(60.48deg);
+  width: 500px;
+  height: 200px;
+}
+
+.bg-grad-7 {
+  background: rgba(25, 246, 246, 0.5);
+  filter: blur(50px);
+  width: 150px;
+  height: 150px;
+  right: 10px;
+  top: 10px;
+}
+
+.bg-card {
+  background: linear-gradient(105.81deg, rgba(255, 255, 255, 0.07) 0.73%, rgba(196, 196, 196, 0.01) 100%);
+}
+
+.bg-links {
+  background: linear-gradient(92.49deg, #C33764 0%, #1D2671 100%);
+}
+
 /* copied from figma */
 .card {
   background: linear-gradient(105.81deg, rgba(255, 255, 255, 0.56) 0.73%, rgba(196, 196, 196, 0.24) 100%);

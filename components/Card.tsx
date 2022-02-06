@@ -5,7 +5,7 @@ interface PageProps {
 }
 
 const Card: NextPage<PageProps> = ({ children, className }) => {
-  return <div className={"backdrop-blur-sm bg-white/10 " + className}>{children}</div>
+  return <div className={"backdrop-blur-sm bg-card " + className}>{children}</div>
 }
 
 export default Card

@@ -6,6 +6,9 @@ module.exports = {
   ],
   theme: {
     extend: {
+      colors: {
+        secondary: "#91FF80"
+      },
       fontFamily: {
         body: ['Nunito'],
         sans: ['"Open Sans"']

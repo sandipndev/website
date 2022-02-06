@@ -48,20 +48,21 @@ const Intro: NextPage = () => {
     <div className="relative h-screen overflow-hidden">
       <Backgrounds />
 
-      {/* Content */}
-      <div className="relative">
-
-        <Card className="w-1/2 text-white rounded-xl p-4 flex flex-col space-y-2 relative">
-          <div className="absolute right-4 w-40 h-40">
+      {/* Main Card */}
+      <div className="relative overflow-hidden w-1/2 rounded-3xl">
+        <div className="absolute bg-grad-6"></div>
+        <div className="absolute bg-grad-7"></div>
+        <Card className="text-white py-6 px-10 flex flex-col space-y-2 relative z-10">
+          <div className="absolute right-4 top-0 w-44 h-44">
             <Image src={wink} alt="me, winking" />
           </div>
-          <p className="pt-4 text-lg">Hi there!
+          <p className="pt-2 text-lg">Hi there!
             <span className="ml-2 h-12 w-12">
               <Image src={wave} alt="wave" />
             </span>
           </p>
           <h1 className="text-4xl font-bold">Sandipan Dey</h1>
-          <h2 className="text-xl font-bold">Dreamer, Developer, Pragmatist</h2>
+          <h2 className="text-xl font-bold text-secondary">Dreamer, Developer, Pragmatist</h2>
           <p className="text-md">
             <Spacer />
             Hello, my name is  Sandipan Dey and I’m a product manager. I love coming up with innovative project ideas and build them out using frameworks I know.
@@ -73,8 +74,11 @@ const Intro: NextPage = () => {
             <span className="font-bold">PS.</span> Dope Potterhead, waiting for the Quill of Acceptance to drop me a letter.
             <br />
             <span className="font-bold">PPS.</span> Emails are the best forms of communication.
+            <Spacer />
           </p>
         </Card>
+        <div className="bg-links p-6">
+        </div>
       </div>
     </div>
   </>
