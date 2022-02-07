@@ -12,8 +12,8 @@ import Social from '../components/Social'
 
 const MainCard: NextPage = () => (
   <Card
-    outerClassName="max-w-3xl -rotate-1 hover:rotate-0 hover:scale-105 transform-gpu transition ease-in-out duration-300"
-    className="text-white py-6 px-10 flex flex-col space-y-2 relative z-10"
+    outerClassName="max-w-3xl -rotate-1 hover:rotate-0 hover:scale-105 transform-gpu transition delay-50 ease-in-out duration-300"
+    className="bg-card text-white py-6 px-10 flex flex-col space-y-2 relative z-10"
     absBackgroundFills={[
       <div key={1} className="absolute bg-grad-6"></div>,
       <div key={2} className="absolute bg-grad-7"></div>

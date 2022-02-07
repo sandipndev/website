@@ -84,6 +84,10 @@ img {
   background: linear-gradient(105.81deg, rgba(255, 255, 255, 0.07) 0.73%, rgba(196, 196, 196, 0.01) 100%);
 }
 
+.bg-spotify {
+  background: linear-gradient(105.81deg, rgba(30, 215, 96, 0.6) 0.73%, rgba(30, 215, 96, 0.4) 100%);
+}
+
 .bg-links {
   background: linear-gradient(92.49deg, #C33764 0%, #1D2671 100%);
 }
