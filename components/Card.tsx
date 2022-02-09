@@ -16,7 +16,7 @@ const Card: NextPage<PageProps> = ({
   footer = undefined,
 }) => {
   return (
-    <div className={"relative overflow-hidden rounded-3xl " + outerClassName}>
+    <div className={"relative overflow-hidden rounded-3xl shadow " + outerClassName}>
       {absBackgroundFills.map(node => node)}
       {/* FIXME: backdrop-blur-sm was removed because hardware and compliance */}
       <div className={className}>
