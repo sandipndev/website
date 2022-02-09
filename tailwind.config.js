@@ -7,7 +7,8 @@ module.exports = {
   theme: {
     extend: {
       colors: {
-        secondary: "#91FF80"
+        secondary: "#91FF80",
+        spotify: "#1ed760"
       },
       fontFamily: {
         body: ['Nunito'],

@@ -13,13 +13,13 @@ const Card: NextPage<PageProps> = ({
   outerClassName = "",
   className = "",
   absBackgroundFills = [],
-  footer = <></>
+  footer = undefined,
 }) => {
   return (
-    <div className={"relative overflow-hidden rounded-3xl " + outerClassName}>
+    <div className={"relative overflow-hidden rounded-3xl shadow " + outerClassName}>
       {absBackgroundFills.map(node => node)}
       {/* FIXME: backdrop-blur-sm was removed because hardware and compliance */}
-      <div className={"bg-card " + className}>
+      <div className={className}>
         {children}
       </div>
       {footer && <div className="bg-links p-6 px-10 flex items-center space-x-5 text-white text-3xl">
