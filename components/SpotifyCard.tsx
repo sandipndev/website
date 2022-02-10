@@ -52,7 +52,11 @@ const SpotifyCard: NextPage = () => {
   }, [getActivity, smoothPlayhead])
 
   return (
-    <Card outerClassName={`bg-spotify bg-blend-color-dodge w-[28rem] h-24 rotate-1 hover:scale-105 hover:rotate-2 transition-gpu ease-in-out duration-300 delay-50 ${(activity === "loading" || !activity) ? "opacity-80" : "opacity-100"}`}>
+    <Card
+      absoluteElements={activity && activity !== "loading" && activity.is_playing ? [
+        <div key={1} className="absolute bg-spotifyGreen text-spotifyBlack font-bold px-2 -top-4 rounded-t-md left-5 text-xs">Listening to</div>,
+      ] : []}
+      outerClassName={`bg-spotify bg-blend-color-dodge w-[28rem] h-24 rotate-1 hover:scale-105 hover:rotate-2 transition-gpu ease-in-out duration-300 delay-50 ${(activity === "loading" || !activity) ? "opacity-80" : "opacity-100"}`}>
       {activity && activity !== "loading" ? (
         <div className="flex items-center justify-between">
           <div className="relative basis-3/4 max-w-[21rem] pl-4 pr-2">
@@ -79,7 +83,7 @@ const SpotifyCard: NextPage = () => {
             <img className="shadow" src={activity.album_cover_image} alt="album cover" />
             <a href={activity.url} className="flex absolute top-0 bg-black bg-opacity-50 items-center justify-center w-full h-full">
               <div className="text-spotify font-extrabold text-xl">
-                {activity.is_playing ? <FaPlay /> : <FaPause />}
+                {activity.is_playing ? <FaPause /> : <FaPlay />}
               </div>
             </a>
           </div>

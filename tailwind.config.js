@@ -8,7 +8,12 @@ module.exports = {
     extend: {
       colors: {
         secondary: "#91FF80",
-        spotify: "#1ed760"
+        spotify: "#1ed760",
+        spotifyGreen: "#1db954",
+        spotifyBlack: "#191414"
+      },
+      scale: {
+        '102': '1.02'
       },
       fontFamily: {
         body: ['Nunito'],
@@ -16,16 +21,11 @@ module.exports = {
       },
       animation: {
         hi: 'hi 1s ease-in-out infinite',
-        breathe: 'breathe 5s ease-out infinite normal'
       },
       keyframes: {
         hi: {
           '0%, 100%': { transform: 'rotate(-8deg)' },
           '50%': { transform: 'rotate(12deg)' },
-        },
-        breathe: {
-          '0%, 60%, 100%': { transform: 'scale(0.9' },
-          '25%': { transform: 'scale(1)' },
         }
       }
     },
