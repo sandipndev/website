@@ -3,6 +3,7 @@ import type { NextPage } from 'next'
 import Background from '../components/backgrounds/IntroBg'
 import MainCard from '../components/MainCard'
 import SpotifyCard from '../components/SpotifyCard'
+import TwitterCard from '../components/TwitterCard'
 
 const Intro: NextPage = () => {
   return (
@@ -12,6 +13,7 @@ const Intro: NextPage = () => {
         <MainCard />
         <div className="flex flex-col space-y-40">
           <SpotifyCard />
+          <TwitterCard />
         </div>
       </div>
     </div>
