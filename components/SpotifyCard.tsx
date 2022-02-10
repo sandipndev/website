@@ -51,10 +51,8 @@ const SpotifyCard: NextPage = () => {
     return () => { clearInterval(t1); clearInterval(t2); }
   }, [getActivity, smoothPlayhead])
 
-  if (activity !== "loading" && activity == null) return <></>
-
   return (
-    <Card outerClassName="bg-spotify bg-blend-color-dodge w-[28rem] h-24 rotate-1 hover:scale-105 hover:rotate-2 transition-gpu ease-in-out duration-300 delay-50">
+    <Card outerClassName={`bg-spotify bg-blend-color-dodge w-[28rem] h-24 rotate-1 hover:scale-105 hover:rotate-2 transition-gpu ease-in-out duration-300 delay-50 ${(activity === "loading" || !activity) ? "opacity-80" : "opacity-100"}`}>
       {activity && activity !== "loading" ? (
         <div className="flex items-center justify-between">
           <div className="relative basis-3/4 max-w-[21rem] pl-4 pr-2">
