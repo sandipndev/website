@@ -15,12 +15,17 @@ module.exports = {
         sans: ['"Open Sans"']
       },
       animation: {
-        hi: 'hi 1s ease-in-out infinite'
+        hi: 'hi 1s ease-in-out infinite',
+        breathe: 'breathe 5s ease-out infinite normal'
       },
       keyframes: {
         hi: {
           '0%, 100%': { transform: 'rotate(-8deg)' },
           '50%': { transform: 'rotate(12deg)' },
+        },
+        breathe: {
+          '0%, 60%, 100%': { transform: 'scale(0.9' },
+          '25%': { transform: 'scale(1)' },
         }
       }
     },

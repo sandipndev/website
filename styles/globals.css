@@ -76,8 +76,8 @@ img {
   filter: blur(50px);
   width: 200px;
   height: 200px;
-  right: 25px;
-  top: 5px;
+  right: -5px;
+  top: -5px;
 }
 
 .bg-card {

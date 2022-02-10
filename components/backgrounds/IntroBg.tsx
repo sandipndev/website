@@ -1,7 +1,6 @@
-import type { NextPage } from 'next'
 import Image from 'next/image'
 
-import bg1 from "../../assets/images/bg-1.png"
+import bg1 from "../../assets/images/bg-1.jpg"
 
 import sling from "../../assets/images/sling.svg"
 import jupyter from "../../assets/images/jupyter.svg"
@@ -11,7 +10,6 @@ const IntroBg = () => <>
   <Image
     src={bg1}
     alt="Background"
-    className="mix-blend-color-dodge"
     layout="fill"
     objectFit="cover"
     objectPosition="center"
