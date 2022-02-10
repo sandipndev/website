@@ -1,11 +1,11 @@
 import type { NextApiRequest, NextApiResponse } from "next";
 import axios from "axios";
 
-interface TwitterActivity {
+export type TwitterActivity = {
   id: string;
   text: string;
   profile_url: string;
-}
+};
 
 const handler = async (
   _: NextApiRequest,

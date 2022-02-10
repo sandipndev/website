@@ -6,7 +6,7 @@ import Card from './Card'
 import type { SpotifyActivity } from '../pages/api/spotify/activity'
 
 import spotifyLogo from '../assets/images/spotify-logo.png'
-import { FaPause, FaPlay } from 'react-icons/fa'
+import { FaPause, FaPlay, FaSpotify } from 'react-icons/fa'
 
 const msToHMS = (ms: number) => {
   let seconds = ms / 1000;
@@ -54,7 +54,10 @@ const SpotifyCard: NextPage = () => {
   return (
     <Card
       absoluteElements={activity && activity !== "loading" && activity.is_playing ? [
-        <div key={1} className="absolute bg-spotifyGreen text-spotifyBlack font-bold px-2 -top-4 rounded-t-md left-5 text-xs">Listening to</div>,
+        <div key={1} className="absolute bg-spotifyGreen text-spotifyBlack font-bold px-2 pr-3 py-1 -top-5 rounded-t-md left-5 text-xs flex space-x-2 justify-center items-center">
+          <FaSpotify />
+          <span>Listening to</span>
+        </div>,
       ] : []}
       outerClassName={`bg-spotify bg-blend-color-dodge w-[28rem] h-24 rotate-1 hover:scale-105 hover:rotate-2 transition-gpu ease-in-out duration-300 delay-50 ${(activity === "loading" || !activity) ? "opacity-80" : "opacity-100"}`}>
       {activity && activity !== "loading" ? (

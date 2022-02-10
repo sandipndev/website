@@ -11,7 +11,7 @@ const Intro: NextPage = () => {
       <Background />
       <div className="flex flex-row space-x-20 h-screen justify-center items-center">
         <MainCard />
-        <div className="flex flex-col space-y-40">
+        <div className="flex flex-col space-y-10">
           <SpotifyCard />
           <TwitterCard />
         </div>

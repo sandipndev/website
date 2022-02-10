@@ -10,7 +10,9 @@ module.exports = {
         secondary: "#91FF80",
         spotify: "#1ed760",
         spotifyGreen: "#1db954",
-        spotifyBlack: "#191414"
+        spotifyBlack: "#191414",
+        twitter: "#1da1f2",
+        twitterBlack: "#14171a"
       },
       scale: {
         '102': '1.02'
