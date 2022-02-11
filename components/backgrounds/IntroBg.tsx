@@ -33,7 +33,7 @@ const IntroBg = () => <>
       alt="Wheel"
     />
   </div>
-  <div className="absolute opacity-80 bg-grad-7" style={{ top: "6rem" }}></div>
+  <div className="absolute opacity-80 bg-grad-7 sm:hidden" style={{ top: "6rem" }}></div>
 </>
 
 export default IntroBg

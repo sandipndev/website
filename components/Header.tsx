@@ -4,7 +4,7 @@ import Image from 'next/image'
 import logo from "../assets/images/logo.png"
 
 const Header: NextPage = () => {
-  return <div className="absolute px-5 sm:px-0 w-screen flex flex-row justify-between items-center mt-8 max-w-6xl">
+  return <div className="absolute px-5 w-screen flex flex-row justify-between items-center mt-8 max-w-6xl">
     {/* eslint-disable-next-line @next/next/no-html-link-for-pages */}
     <a href="/" className="cursor-pointer scale-90 sm:scale-100">
       <Image src={logo} alt="logo" />
