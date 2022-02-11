@@ -8,10 +8,10 @@ import TwitterCard from '../components/TwitterCard'
 
 const Intro: NextPage = () => {
   return (
-    <div className="relative h-screen flex justify-center overflow-hidden">
+    <div className="relative sm:h-screen flex justify-center overflow-hidden">
       <Background />
       <Header />
-      <div className="flex flex-row space-x-20 h-screen justify-center items-center">
+      <div className="mt-40 sm:mt-0 sm:flex sm:flex-row sm:space-x-20 sm:h-screen sm:justify-center sm:items-center">
         <MainCard />
         <div className="flex flex-col space-y-10">
           <SpotifyCard />

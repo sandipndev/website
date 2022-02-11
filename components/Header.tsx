@@ -4,12 +4,12 @@ import Image from 'next/image'
 import logo from "../assets/images/logo.png"
 
 const Header: NextPage = () => {
-  return <div className="absolute w-screen flex flex-row justify-between items-center mt-8 max-w-6xl">
+  return <div className="absolute px-5 sm:px-0 w-screen flex flex-row justify-between items-center mt-8 max-w-6xl">
     {/* eslint-disable-next-line @next/next/no-html-link-for-pages */}
-    <a href="/" className="cursor-pointer">
+    <a href="/" className="cursor-pointer scale-90 sm:scale-100">
       <Image src={logo} alt="logo" />
     </a>
-    <div className="flex space-x-8 justify-center items-center">
+    <div className="flex space-x-6 justify-center items-center scale-90 sm:scale-100">
       <a href="https://blog.sandipan.dev" target="_blank" rel="noreferrer"
         className="text-white font-medium text-xl lowercase hover:underline hover:underline-offset-8">Blog</a>
       <a href="/resume.pdf" target="_blank" rel="noreferrer"
