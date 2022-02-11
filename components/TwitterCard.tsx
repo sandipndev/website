@@ -33,7 +33,7 @@ const TwitterCard: NextPage = () => {
           <div className="font-bold text-sm max-w-[24rem]">{activity.text}</div>
           <div className="relative self-start px-8 flex items-center w-full">
             <div className="text-xs font-bold text-twitter">Latest thoughts on Twitter from @sandipndev</div>
-            <a href={"https://twitter.com/sandipndev/status" + activity.id} className="absolute right-4 px-2 font-bold text-xs rounded-full bg-twitter">
+            <a target="_blank" rel="noreferrer" href={"https://twitter.com/sandipndev/status/" + activity.id} className="absolute right-4 px-2 font-bold text-xs rounded-full bg-twitter">
               Open in Twitter
             </a>
           </div>
