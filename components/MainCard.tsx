@@ -12,11 +12,16 @@ import Social from '../components/Social'
 
 const MainCard: NextPage = () => (
   <Card
-    outerClassName="max-w-3xl antialiased -rotate-1 hover:rotate-0 hover:scale-102 transform-gpu transition delay-50 ease-in-out duration-300"
-    className="bg-card text-white py-6 px-10 flex flex-col space-y-2 relative z-10"
+    outerClassName="w-[23rem] sm:px-8 lg:px-0 sm:w-full sm:max-w-3xl antialiased sm:-rotate-1 hover:rotate-0 hover:scale-102 transform-gpu transition delay-50 ease-in-out duration-300"
+    className="bg-card text-white pt-5 py-4 sm:py-6 px-6 sm:px-10 flex flex-col space-y-1 sm:space-y-2 relative z-10"
     absBackgroundFills={[
       <div key={1} className="absolute bg-grad-6"></div>,
-      <div key={2} className="absolute bg-grad-7"></div>
+      <div key={2} className="absolute hidden sm:block bg-grad-7"></div>
+    ]}
+    absoluteElements={[
+      <div key="1" className="absolute z-20 right-0 sm:right-6 lg:right-0 -top-16 sm:-top-2 w-40 sm:w-auto">
+        <Image src={wink} alt="me, winking" />
+      </div>
     ]}
     footer={
       <>
@@ -60,19 +65,16 @@ const MainCard: NextPage = () => (
       </>
     }
   >
-    <div className="absolute right-0 -top-2 w-40 sm:w-auto">
-      <Image src={wink} alt="me, winking" />
-    </div>
-    <p className="pt-2 text-lg">Hi there!
+    <p className="pt-2 sm:text-lg text-sm">Hi there!
       <span className="ml-2 inline-block animate-hi">
-        <Image src={wave} height="20" width="20" alt="wave" />
+        <Image src={wave} alt="wave" />
       </span>
     </p>
-    <h1 className="text-4xl font-bold">Sandipan Dey</h1>
-    <h2 className="text-xl font-bold text-secondary">Dreamer, Developer, Pragmatist</h2>
-    <p className="text-md">
+    <h1 className="text-2xl sm:text-4xl font-bold">Sandipan Dey</h1>
+    <h2 className="text-md sm:text-xl font-bold text-secondary">Dreamer, Developer, Pragmatist</h2>
+    <p className="text-sm sm:text-base">
       <Spacer />
-      <div className="w-3/4">Hello, my name is  Sandipan Dey and I’m a product manager. I love coming up with innovative project ideas and build them out using frameworks I know.</div>
+      <p className="sm:w-3/4">Hello, my name is  Sandipan Dey and I’m a product manager. I love coming up with innovative project ideas and build them out using frameworks I know.</p>
       <Spacer />
       I love working with new bleeding-edge technologies. Recently, I’m super excited about Blockchains and believe they are our future. If you have a cool project in your mind and want to pitch me the idea so that we can work on it together, hit me up!
       <Spacer />

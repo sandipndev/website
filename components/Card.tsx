@@ -26,7 +26,7 @@ const Card: NextPage<PageProps> = ({
         <div className={className}>
           {children}
         </div>
-        {footer && <div className="bg-links p-6 px-10 flex items-center space-x-5 text-white text-3xl">
+        {footer && <div className="bg-links p-6 sm:px-10 flex items-center space-x-4 sm:space-x-5 text-white">
           {footer}
         </div>}
       </div>
