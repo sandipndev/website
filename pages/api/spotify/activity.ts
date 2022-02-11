@@ -32,12 +32,14 @@ const handler = async (
     (cachedActivity = JSON.parse(
       (await redis.get("spotify-activity")) || "null"
     )) !== "null"
-  )
+  ) {
+    redis.disconnect();
     return res.json({
       ...cachedActivity,
       progress_ms:
         cachedActivity.progress_ms + Date.now() - Number(cachedActivityTime),
     });
+  }
 
   const spotifyApi = new SpotifyWebApi({
     clientId: process.env.SPOTIFY_CLIENT_ID as string,
@@ -72,6 +74,7 @@ const handler = async (
 
   await redis.set("spotify-lastCollected", JSON.stringify(Date.now()));
   await redis.set("spotify-activity", JSON.stringify(data));
+  redis.disconnect();
   res.status(200).json(data);
 };
 

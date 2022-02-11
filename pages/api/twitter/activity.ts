@@ -26,6 +26,7 @@ const handler = async (
       (await redis.get("twitter-activity")) || "null"
     )) !== "null"
   ) {
+    redis.disconnect();
     return res.json(cachedActivity);
   }
 
@@ -43,6 +44,7 @@ const handler = async (
 
   await redis.set("twitter-lastCollected", JSON.stringify(Date.now()));
   await redis.set("twitter-activity", JSON.stringify(data));
+  redis.disconnect();
   res.json(data);
 };
 
