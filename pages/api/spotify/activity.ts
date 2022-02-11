@@ -1,5 +1,9 @@
-import SpotifyWebApi from "spotify-web-api-node";
 import type { NextApiRequest, NextApiResponse } from "next";
+
+import SpotifyWebApi from "spotify-web-api-node";
+
+import Redis from "ioredis";
+import ms from "ms";
 
 export type SpotifyActivity = {
   type: "track" | "episode" | "ad" | "unknown";
@@ -17,6 +21,24 @@ const handler = async (
   _: NextApiRequest,
   res: NextApiResponse<SpotifyActivity | null>
 ) => {
+  const redis = new Redis(process.env.REDIS_URL as string);
+
+  const cachedActivityTime = await redis.get("spotify-lastCollected");
+  let cachedActivity: SpotifyActivity;
+
+  if (
+    cachedActivityTime &&
+    Date.now() - Number(cachedActivityTime) <= ms("5s") &&
+    (cachedActivity = JSON.parse(
+      (await redis.get("spotify-activity")) || "null"
+    )) !== "null"
+  )
+    return res.json({
+      ...cachedActivity,
+      progress_ms:
+        cachedActivity.progress_ms + Date.now() - Number(cachedActivityTime),
+    });
+
   const spotifyApi = new SpotifyWebApi({
     clientId: process.env.SPOTIFY_CLIENT_ID as string,
     clientSecret: process.env.SPOTIFY_CLIENT_SECRET as string,
@@ -48,6 +70,8 @@ const handler = async (
     is_playing: body.is_playing,
   };
 
+  await redis.set("spotify-lastCollected", JSON.stringify(Date.now()));
+  await redis.set("spotify-activity", JSON.stringify(data));
   res.status(200).json(data);
 };
 

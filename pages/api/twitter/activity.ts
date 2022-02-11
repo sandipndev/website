@@ -1,6 +1,9 @@
 import type { NextApiRequest, NextApiResponse } from "next";
 import axios from "axios";
 
+import Redis from "ioredis";
+import ms from "ms";
+
 export type TwitterActivity = {
   id: string;
   text: string;
@@ -9,8 +12,23 @@ export type TwitterActivity = {
 
 const handler = async (
   _: NextApiRequest,
-  res: NextApiResponse<TwitterActivity>
+  res: NextApiResponse<TwitterActivity | null>
 ) => {
+  const redis = new Redis(process.env.REDIS_URL as string);
+
+  const cachedActivityTime = await redis.get("twitter-lastCollected");
+  let cachedActivity: TwitterActivity | null;
+
+  if (
+    cachedActivityTime &&
+    Date.now() - Number(cachedActivityTime) <= ms("30s") &&
+    (cachedActivity = JSON.parse(
+      (await redis.get("twitter-activity")) || "null"
+    )) !== "null"
+  ) {
+    return res.json(cachedActivity);
+  }
+
   const {
     data: { data: lastTweets },
   } = await axios.get(
@@ -18,10 +36,14 @@ const handler = async (
     { headers: { authorization: "Bearer " + process.env.TWITTER_BEARER_TOKEN } }
   );
 
-  res.json({
+  const data = {
     ...lastTweets[0],
     profile_url: process.env.TWITTER_USER_PHOTO_URL,
-  });
+  };
+
+  await redis.set("twitter-lastCollected", JSON.stringify(Date.now()));
+  await redis.set("twitter-activity", JSON.stringify(data));
+  res.json(data);
 };
 
 export default handler;
