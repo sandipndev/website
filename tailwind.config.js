@@ -12,7 +12,8 @@ module.exports = {
         spotifyGreen: "#1db954",
         spotifyBlack: "#191414",
         twitter: "#1da1f2",
-        twitterBlack: "#14171a"
+        twitterBlack: "#14171a",
+        tango: "#FE5F55"
       },
       scale: {
         '102': '1.02'
