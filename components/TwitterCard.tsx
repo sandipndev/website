@@ -20,12 +20,16 @@ const TwitterCard: NextPage = () => {
 
   return (
     <Card
+      props={{
+        whileHover: { scale: 1.01, rotate: 1 },
+        whileTap: { scale: 0.99, rotate: 0 }
+      }}
       absoluteElements={[
         <div key="1" className="absolute top-2 -left-4 bg-twitter p-2 rounded-l-lg">
           <FaTwitter className="text-white" />
         </div>
       ]}
-      outerClassName="bg-twitterBlack bg-blend-color-dodge w-[28rem] h-24 -rotate-1 hover:scale-105 hover:rotate-2 transition-gpu ease-in-out duration-300 delay-50 opacity-80">
+      outerClassName="bg-twitterBlack bg-blend-color-dodge w-[28rem] h-24 transition-gpu ease-in-out duration-300 delay-50 opacity-80">
       {!activity || activity === "loading" ?
         <div className="text-white flex justify-center items-center h-24">Can&apos;t connect to Twitter right now</div>
         :

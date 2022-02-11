@@ -1,3 +1,4 @@
+import { HTMLMotionProps, motion } from 'framer-motion';
 import type { NextPage } from 'next'
 import { ReactNode } from 'react'
 
@@ -7,6 +8,7 @@ interface PageProps {
   absBackgroundFills?: ReactNode[]
   footer?: ReactNode
   absoluteElements?: ReactNode[]
+  props?: HTMLMotionProps<"div">
 }
 
 const Card: NextPage<PageProps> = ({
@@ -16,9 +18,13 @@ const Card: NextPage<PageProps> = ({
   absBackgroundFills = [],
   absoluteElements = [],
   footer = undefined,
+  props = []
 }) => {
   return (
-    <div className={"relative rounded-3xl shadow " + outerClassName}>
+    <motion.div
+      {...props}
+      className={"relative rounded-3xl shadow " + outerClassName}
+    >
       {absoluteElements.map(node => node)}
       <div className={"relative overflow-hidden rounded-3xl shadow"}>
         {absBackgroundFills.map(node => node)}
@@ -30,7 +36,7 @@ const Card: NextPage<PageProps> = ({
           {footer}
         </div>}
       </div>
-    </div>
+    </motion.div>
   );
 }
 
