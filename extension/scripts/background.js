@@ -25,7 +25,7 @@ chrome.runtime.onMessage.addListener(async (req, sender) => {
   }
 })
 
-chrome.alarms.create('refresh', { periodInMinutes: 0.1 });
+chrome.alarms.create('refresh', { periodInMinutes: 1 });
 
 chrome.alarms.onAlarm.addListener(() => {
   chrome.tabs.query(
