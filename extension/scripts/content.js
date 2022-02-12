@@ -1,7 +1,8 @@
-const urlRegex = /^https?:\/\/(?:[^./?#]+\.)?youtube\.com/;
+const urlRegex = /^https?:\/\/(?:[^./?#]+\.)?youtube\.com.*/;
 
 chrome.runtime.onMessage.addListener(function (msg) {
   if (urlRegex.test(window.location.href) && msg.text === 'report_nowPlayingYT') {
+    console.debug("[YT Activity Fetcher]: Sending YT Info")
     const video = document.querySelector("video");
     const object = {
       currentTime: video.currentTime,

@@ -1,4 +1,5 @@
 const sendDetails = async (object, HOME_PAGE_URL, HOME_PAGE_PASWORD) => {
+  console.log(object)
   await fetch(HOME_PAGE_URL + "/api/youtube/set", {
     method: "POST",
     body: JSON.stringify(object),
@@ -30,6 +31,7 @@ chrome.alarms.onAlarm.addListener(() => {
   chrome.tabs.query(
     {},
     (tabArray) => {
+      console.log(tabArray)
       tabArray.forEach(({ id }) =>
         chrome.tabs.sendMessage(id, { text: 'report_nowPlayingYT' })
       )
