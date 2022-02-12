@@ -1,7 +1,7 @@
 const sendDetails = async (object, HOME_PAGE_URL, HOME_PAGE_PASWORD) => {
   await fetch(HOME_PAGE_URL + "/api/youtube/set", {
     method: "POST",
-    data: JSON.stringify(object),
+    body: JSON.stringify(object),
     headers: {
       "Content-Type": "application/json",
       authorization: "Bearer " + HOME_PAGE_PASWORD
