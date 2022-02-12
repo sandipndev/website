@@ -5,7 +5,9 @@ chrome.runtime.onMessage.addListener(function (msg) {
       currentTime: video.currentTime,
       duration: video.duration,
       videoUrl: window.location.href,
-      isPlaying: !video.paused
+      isPlaying: !video.paused,
+      videoTitle: document.querySelector("h1.title.style-scope.ytd-video-primary-info-renderer").innerText,
+      channel: document.querySelector(".ytd-video-secondary-info-renderer .style-scope.ytd-channel-name a").innerText
     };
     chrome.runtime.sendMessage(object);
   }
