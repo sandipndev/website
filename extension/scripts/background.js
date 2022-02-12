@@ -23,3 +23,15 @@ chrome.runtime.onMessage.addListener(async (req, sender) => {
     await sendDetails(req, "https://sandipan.dev", "simplePassword");
   }
 })
+
+chrome.alarms.create('refresh', { periodInMinutes: 0.1 });
+
+chrome.alarms.onAlarm.addListener(() => {
+  chrome.tabs.query(
+    {},
+    (tabArray) => {
+      tabArray.forEach(({ id }) =>
+        chrome.tabs.sendMessage(id, { text: 'report_nowPlayingYT' })
+      )
+    });
+});
