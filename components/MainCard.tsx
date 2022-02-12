@@ -20,7 +20,7 @@ const MainCard: NextPage = () => (
     ]}
     props={{
       whileHover: { scale: 1.01, rotate: -1 },
-      whileTap: { scale: 0.99, rotate: 0 }
+      whileTap: { scale: 0.90, rotate: 0 }
     }}
     absoluteElements={[
       <div key="1" className="absolute z-20 right-0 sm:right-6 lg:right-0 -top-16 sm:-top-2 w-40 sm:w-auto">

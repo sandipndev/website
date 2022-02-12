@@ -55,7 +55,7 @@ const SpotifyCard: NextPage = () => {
     <Card
       props={{
         whileHover: { scale: 1.01, rotate: 1 },
-        whileTap: { scale: 0.99, rotate: 0 }
+        whileTap: { scale: 0.90, rotate: 0 }
       }}
       absoluteElements={activity && activity !== "loading" && activity.is_playing ? [
         <div key={1} className="absolute bg-spotifyGreen text-spotifyBlack font-bold px-2 pr-3 py-1 -top-5 rounded-t-md left-5 text-xs flex space-x-2 justify-center items-center">

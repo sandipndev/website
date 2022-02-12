@@ -22,7 +22,7 @@ const TwitterCard: NextPage = () => {
     <Card
       props={{
         whileHover: { scale: 1.01, rotate: 1 },
-        whileTap: { scale: 0.99, rotate: 0 }
+        whileTap: { scale: 0.90, rotate: 0 }
       }}
       absoluteElements={[
         <div key="1" className="absolute top-2 -left-4 bg-twitter p-2 rounded-l-lg">
