@@ -13,7 +13,8 @@ module.exports = {
         spotifyBlack: "#191414",
         twitter: "#1da1f2",
         twitterBlack: "#14171a",
-        tango: "#FE5F55"
+        tango: "#FE5F55",
+        youtube: "#FF0000"
       },
       scale: {
         '102': '1.02'

@@ -6,6 +6,7 @@ import Background from '../components/backgrounds/IntroBg'
 import MainCard from '../components/MainCard'
 import SpotifyCard from '../components/SpotifyCard'
 import TwitterCard from '../components/TwitterCard'
+import YouTubeCard from '../components/YouTubeCard'
 
 const Intro: NextPage = () => {
   return (
@@ -18,6 +19,7 @@ const Intro: NextPage = () => {
           <div className="text-white lowercase -mt-10 text-opacity-80">LATEST ACTIVITY</div>
           <SpotifyCard />
           <TwitterCard />
+          <YouTubeCard />
         </div>
       </div>
     </div>
