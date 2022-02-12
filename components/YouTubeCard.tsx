@@ -16,7 +16,8 @@ const YouTubeCard: NextPage = () => {
     const videoIdRegex = new RegExp(/(?:youtube\.com\/(?:[^\/]+\/.+\/|(?:v|e(?:mbed)?)\/|.*[?&]v=)|youtu\.be\/)([^"&?\/\s]{11})/gi);
     const videoId: string = videoIdRegex.exec(activity.videoUrl)![1]
     setActivity({
-      ...activity, initialTime: activity.currentTime, saveTime: Date.now(),
+      ...activity, initialTime:
+        activity.currentTime,
       videoId,
     })
   }, [setActivity])
@@ -26,7 +27,7 @@ const YouTubeCard: NextPage = () => {
       if (a !== "loading" && a && a.isPlaying)
         return {
           ...a,
-          currentTime: (a.currentTime < a.duration) ? (a.initialTime + ((Date.now() - a.saveTime) / 1000)) : a.currentTime
+          currentTime: (a.currentTime < a.duration) ? (a.initialTime + ((Date.now() - a.saveTime) / 1000)) + ms('10s') / 1000 : a.currentTime
         }
       return a;
     })
@@ -34,7 +35,7 @@ const YouTubeCard: NextPage = () => {
 
   useEffect(() => {
     getActivity();
-    const t1 = setInterval(() => getActivity(), ms('1m'));
+    const t1 = setInterval(() => getActivity(), ms('10s'));
     const t2 = setInterval(() => smoothPlayhead(), 50);
     return () => { clearInterval(t1); clearInterval(t2) }
   }, [getActivity, smoothPlayhead])

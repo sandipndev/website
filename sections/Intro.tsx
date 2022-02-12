@@ -10,10 +10,10 @@ import YouTubeCard from '../components/YouTubeCard'
 
 const Intro: NextPage = () => {
   return (
-    <div className="relative sm:h-screen flex justify-center overflow-hidden">
+    <div className="relative lg:h-screen flex justify-center overflow-hidden">
       <Background />
       <Header />
-      <div className="mt-40 sm:mt-0 flex flex-col space-y-12 mb-10 lg:flex-row lg:space-x-20 lg:h-screen justify-center items-center">
+      <div className="mt-40 lg:mt-0 flex flex-col space-y-12 mb-10 lg:flex-row lg:space-x-20 lg:h-screen justify-center items-center">
         <MainCard />
         <div className="flex flex-col items-center space-y-10 scale-75 sm:scale-100">
           <div className="text-white lowercase -mt-10 text-opacity-80">LATEST ACTIVITY</div>
