@@ -24,10 +24,14 @@ const YouTubeCard: NextPage = () => {
 
   const smoothPlayhead = useCallback(() => {
     setActivity((a: any) => {
+      const newTime = (a.initialTime + ((Date.now() - a.saveTime) / 1000)) + (ms('10s') / 1000);
       if (a !== "loading" && a && a.isPlaying)
         return {
           ...a,
-          currentTime: (a.currentTime < a.duration) ? (a.initialTime + ((Date.now() - a.saveTime) / 1000)) + ms('10s') / 1000 : a.currentTime
+          currentTime:
+            (a.currentTime < a.duration && newTime < a.duration) ?
+              newTime :
+              a.currentTime
         }
       return a;
     })
@@ -56,7 +60,7 @@ const YouTubeCard: NextPage = () => {
         activity && activity.isPlaying ? [
           <div key={1} className="absolute bg-youtube text-white font-bold px-2 pr-3 py-1 -top-6 right-8 rounded-t-md text-xs flex space-x-2 justify-center items-center">
             <FaYoutube />
-            <span>Listening to</span>
+            <span>Watching</span>
           </div>,
         ] : []
       ]}
