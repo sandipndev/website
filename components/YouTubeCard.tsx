@@ -24,7 +24,7 @@ const YouTubeCard: NextPage = () => {
 
   const smoothPlayhead = useCallback(() => {
     setActivity((a: any) => {
-      const newTime = (a.initialTime + ((Date.now() - a.saveTime) / 1000)) + (ms('10s') / 1000);
+      const newTime = a.initialTime + ((Date.now() - a.saveTime) / 1000);
       if (a !== "loading" && a && a.isPlaying)
         return {
           ...a,
