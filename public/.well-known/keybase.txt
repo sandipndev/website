@@ -1,0 +1,56 @@
+==================================================================
+https://keybase.io/sandipndev
+--------------------------------------------------------------------
+
+I hereby claim:
+
+  * I am an admin of https://sandipan.dev
+  * I am sandipndev (https://keybase.io/sandipndev) on keybase.
+  * I have a public key ASBcwb4-UJPa99tGReXV7gcGsl8VO9DFFaD6EzPIzJmahQo
+
+To do so, I am signing this object:
+
+{
+  "body": {
+    "key": {
+      "eldest_kid": "0101f59e76a580d46aa8faa4cdbb577ead7502ab259a7a938b19f27906edb4226f460a",
+      "host": "keybase.io",
+      "kid": "01205cc1be3e5093daf7db4645e5d5ee0706b25f153bd0c515a0fa1333c8cc999a850a",
+      "uid": "4afb9b0022236540df5f2156f77ecf19",
+      "username": "sandipndev"
+    },
+    "merkle_root": {
+      "ctime": 1655454669,
+      "hash": "d0759ffed094eb57250aa2c30fdef55fb7c48a8108e218e2924cdd74e6ac3de52d749a03a11401ea918044559f5a8e4db8da152b27e8752d74323546773cf834",
+      "hash_meta": "7ca26595de935c2d53a7ba9f9360935a40b5c45fa796669165cf13b179cdb6e8",
+      "seqno": 22690963
+    },
+    "service": {
+      "entropy": "1o/gOy5AE8QfdGdNb505vKYZ",
+      "hostname": "sandipan.dev",
+      "protocol": "https:"
+    },
+    "type": "web_service_binding",
+    "version": 2
+  },
+  "client": {
+    "name": "keybase.io go client",
+    "version": "6.0.1"
+  },
+  "ctime": 1655454692,
+  "expire_in": 504576000,
+  "prev": "533b660ca7252e50a8f3d7d8288abf0ec5716ca2f4e5264e750a0972be87d379",
+  "seqno": 43,
+  "tag": "signature"
+}
+
+which yields the signature:
+
+hKRib2R5hqhkZXRhY2hlZMOpaGFzaF90eXBlCqNrZXnEIwEgXMG+PlCT2vfbRkXl1e4HBrJfFTvQxRWg+hMzyMyZmoUKp3BheWxvYWTESpcCK8QgUztmDKclLlCo89fYKIq/DsVxbKL05SZOdQoJcr6H03nEIEdgODuotnF1HuWkKVLLncMfSRAq4ZTs8fSXmjoKSykvAgHCo3NpZ8RANoDDTaiBxahRlYI2BX2RLyNTr7nRNb4kPRn0Z53ITqexmaZuqC+2SPT0kPlUwEVEoZ4sLZtReNq+dwrKBMR9CahzaWdfdHlwZSCkaGFzaIKkdHlwZQildmFsdWXEIKH97XnrlQ3LK6RSnEjSlbBl5fpag+XP9F74KIgMT1tgo3RhZ80CAqd2ZXJzaW9uAQ==
+
+And finally, I am proving ownership of this host by posting or
+appending to this document.
+
+View my publicly-auditable identity here: https://keybase.io/sandipndev
+
+==================================================================
